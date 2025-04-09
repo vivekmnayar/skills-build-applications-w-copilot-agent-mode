@@ -19,7 +19,7 @@ class Command(BaseCommand):
         # Add test teams
         Team().insert_one({'name': 'Team Alpha', 'members': [user1.inserted_id, user2.inserted_id]})
 
-        # Add test activities
+        # Correct collection names for activities and leaderboard
         Activity().insert_one({'user': user1.inserted_id, 'activity_type': 'Running', 'duration': '00:30:00'})
         Activity().insert_one({'user': user2.inserted_id, 'activity_type': 'Cycling', 'duration': '01:00:00'})
 
